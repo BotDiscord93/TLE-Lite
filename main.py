@@ -65,7 +65,7 @@ def main():
     bot = commands.Bot(command_prefix=commands.when_mentioned_or(';'), intents=intents)
     cogs = [file.stem for file in Path('cogs').glob('*.py')]
     for extension in cogs:
-        bot.load_extension(f"cogs.{extension}")
+        bot.load_extension(f'cogs.{extension}')
     logging.info(f'Cogs loaded: {", ".join(bot.cogs)}')
 
     def no_dm_check(ctx):
